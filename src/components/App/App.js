@@ -12,7 +12,7 @@ const business ={
     category: 'Italian',
     rating: 4.5,
     reviewCount: 90
-  }
+  };
 const businesses=[business,business,business,business,business,business]
 class App extends React.Component {
   render(){
@@ -20,7 +20,7 @@ class App extends React.Component {
     <div className="App">
   <h1>ravenous</h1>
   <SearchBar />
-  <BusinessList businesses={this.businesses} />
+  <BusinessList businesses={businesses} />
 </div>
   );
    }
