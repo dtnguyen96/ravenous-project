@@ -18,6 +18,14 @@ constructor(props){
       "Most Reviewed": 'review_count'
   }
 }
+getSortByClass(sortByOption){
+  if(this.state.sortBy===sortByOption){
+    return 'active';
+  }
+  else{
+    return '';
+  }
+}
     renderSortByOptions(){
         return Object.keys(this.sortByOptions).map(sortByOption=>{
             let sortByOptionValue= this.sortByOptions[sortByOption];
