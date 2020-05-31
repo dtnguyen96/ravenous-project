@@ -12,8 +12,10 @@ class SearchBar extends React.Component {
       //sortBy: selected sorting option to use
       sortBy: 'best_match'
     }
+    this.handleSortByChange=this.handleSortByChange.bind(this);
     this.handleTermChange=this.handleTermChange.bind(this);
     this.handleLocationChange=this.handleLocationChange.bind(this);
+    this.handleSearch=this.handleSearch.bind(this);
     this.sortByOptions = {
       "Best Match": "best_match",
       "Highest Rated": 'rating',
@@ -46,6 +48,11 @@ class SearchBar extends React.Component {
     this.setState({
       location: event.target.value
     })
+  }
+  //method to handle a search from user
+  handleSearch(event){
+    this.props.searchYelp(this.state.term,this.state.location, this.state.sortBy)
+    event.preventDefault()
   }
   renderSortByOptions() {
     return Object.keys(this.sortByOptions).map(sortByOption => {
