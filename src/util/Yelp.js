@@ -13,7 +13,7 @@ const yelp = {
                 }
                 //convert returned response into JSON 
             }).then(response => {
-                return response.json();
+                return response.json()
                 //Retrieve list of businesses from the converted JSON response
             }).then(jsonResponse => {
                 /*If response has a business key, return an array that has all of the business' properties:

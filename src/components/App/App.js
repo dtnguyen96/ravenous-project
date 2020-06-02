@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
-import Yelp from '../../util/Yelp';
+import yelp from '../../util/Yelp';
 
 class App extends React.Component {
   //method to simulate a search
@@ -15,7 +15,7 @@ class App extends React.Component {
   }
   searchYelp(term,location,sortBy){
     //update state with the retrieved list of businesses
-    Yelp.search(term,location,sortBy).then(businesses =>{
+    yelp.search(term,location,sortBy).then(console.log(this.state.businesses)).then(businesses =>{
       this.setState({
         businesses: this.state.businesses
       })
