@@ -15,9 +15,9 @@ class App extends React.Component {
   }
   searchYelp(term,location,sortBy){
     //update state with the retrieved list of businesses
-    yelp.search(term,location,sortBy).then(console.log(this.state.businesses)).then(businesses =>{
+    yelp.search(term,location,sortBy).then(businesses =>{
       this.setState({
-        businesses: this.state.businesses
+        businesses: businesses
       })
     })
   }
