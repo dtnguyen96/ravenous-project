@@ -6,6 +6,12 @@ import Yelp from '../../util/Yelp';
 
 class App extends React.Component {
   //method to simulate a search
+  constructor(){
+    this.state={
+       businesses:[]
+    };
+    this.searchYelp=this.searchYelp.bind(this)
+  }
   searchYelp(term,location,sortBy){
     console.log(`Searching Yelp with ${term} , ${location}, ${sortBy}`)
   }
