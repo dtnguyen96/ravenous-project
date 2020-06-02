@@ -13,7 +13,12 @@ class App extends React.Component {
     this.searchYelp=this.searchYelp.bind(this)
   }
   searchYelp(term,location,sortBy){
-    console.log(`Searching Yelp with ${term} , ${location}, ${sortBy}`)
+    //update state with the retrieved list of businesses
+    Yelp.search(term,location,sortBy).then(businesses =>{
+      this.setState({
+        businesses: this.state.businesses
+      })
+    })
   }
   render(){
     return (
