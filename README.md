@@ -2,6 +2,6 @@
 
 This is Yelp-clone web version
 
-Go to this website: ....
+Go to this website: http://theyelpclone.surge.sh/
 
-Put in restaurant name and sortby
+Put in restaurant name and choose sort by, then hit Search
